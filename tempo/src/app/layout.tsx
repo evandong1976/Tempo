@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Serif_Display } from 'next/font/google'
 import "./globals.css";
+
+const serif = DM_Serif_Display({ 
+  weight: '400', subsets: ['latin'] 
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Onyx — Brands & creators",
+  title: "Tempo",
   description: "Connect brands with influencers through simple discovery and matches.",
 };
 

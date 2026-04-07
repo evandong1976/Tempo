@@ -1,7 +1,12 @@
 // app/api/test/route.ts
 import { prisma } from "@/lib/prisma";
+import { handlers } from "@/auth";
+import { type NextRequest } from "next/server"
 
-export async function GET() {
-  
-  return Response.json({ ok: true });
+export async function GET(request: NextRequest) {
+  return handlers.GET(request)
+}
+
+export async function POST(request: NextRequest) {
+  return handlers.POST(request)
 }
